@@ -277,9 +277,12 @@ header {
 }
 
 .gallery {
-  column-count: 6;
-  column-gap: 20px;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px; 
   padding: 20px;
+  grid-auto-rows: 1px;
+  grid-auto-flow: row dense;
 }
 
 .cards-section {
@@ -386,14 +389,11 @@ header {
 }
 
 .card {
-  position: relative;
-  margin-bottom: 20px;
-  break-inside: avoid;
+  position: relative; 
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -402,7 +402,7 @@ header {
 
 .card img {
   width: 100%;
-  height: auto;
+  height: auto; 
   display: block;
 }
 
